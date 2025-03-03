@@ -1,0 +1,7 @@
+{
+  "texts": {
+    "text-title-template": { "default": "Template Page" },
+    "text-title-home": { "default": "Home Page" },
+    "text-body-content-template": { "default": "some text on template page" }
+  }
+}

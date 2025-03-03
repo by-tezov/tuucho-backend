@@ -1,0 +1,39 @@
+{
+  "styles": [
+    {
+      "id": "title-label",
+      "font-size": "*title",
+      "font-color": "0xFFD9D9D9"
+    },
+    {
+      "id": "main-button",
+      "font-size": "26",
+      "font-color": "*blue"
+    },
+    {
+      "id": "item-spacer-h",
+      "height": "48"
+    }
+  ],
+  "colors": {
+    "palette" : {
+      "black": "0xFFFFFFFF",
+      "gray": "0xFFD9D9D9",
+      "red": "0xFFFF0000",
+      "green": "0xFF00FF00",
+      "blue": "0xFF0000FF"
+    }
+  },
+  "dimensions": {
+    "font" : {
+      "title": "26",
+      "body": "18",
+      "button": "22"
+    },
+    "padding" : {
+      "spacer-default": "48",
+      "spacer-fill-half": "0.5"
+    }
+  }  
+}
+  

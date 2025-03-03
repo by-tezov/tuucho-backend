@@ -1,0 +1,70 @@
+{
+  "main": {
+    "type": "layout",
+    "variant": "linear",
+    "style": {
+      "orientation": "vertical"  
+    },
+    "content": {
+      "items": [
+        {
+          "type": "label",
+          "style": {
+            "id": "*title-label"
+          },
+          "content": {
+            "value": { "default": "Credit Page"}
+          }
+        },
+        {
+          "id": "*item-spacer"
+        },
+        {
+          "type": "label",
+          "style": {
+            "font-size": "18",
+            "font-color": "*red"
+          },
+          "content": {
+            "value": { "default": "some text on credit page"}
+          }
+        },
+        {
+          "id": "*item-spacer"
+        },
+        {
+          "type": "button",
+          "style": {
+            "id": "*main-button"
+          },
+          "content": {
+            "value": { "default": "Navigate to home page"},
+            "action": "navigate://id/page-home"
+          }
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "id": "item-spacer",
+      "type": "spacer",
+      "style": {
+        "height": "48"
+      }
+    }
+  ],
+  "styles": [
+    {
+      "id": "title-label",
+      "font-size": "22",
+      "font-color": "*yellow"
+    },
+    {
+      "id": "main-button",
+      "font-size": "*button",
+      "font-color": "*green"
+    }
+  ]
+}
+  

@@ -1,0 +1,10 @@
+{
+  "includes": [
+    "subs://url/subs/sub-components",
+    "subs://url/subs/sub-contents",
+    "subs://url/subs/sub-styles",
+    "subs://url/subs/sub-texts",
+    "subs://url/templates/template-page-default"
+  ]
+}
+  

@@ -1,0 +1,82 @@
+{
+  "main": {
+    "id": "page-home",
+    "type": "layout",
+    "variant": "linear",
+    "style": {
+      "orientation": "vertical"  
+    },
+    "content": {
+      "items": [
+        {
+          "id": "*title-content"
+        },
+        {
+          "id": "*item-spacer"
+        },
+        {
+          "id": "body-label",
+          "type": "label",
+          "style": {
+            "font-size": "*body",
+            "font-color": "*red"
+          },
+          "content": {
+            "value": { "default": "some text on home page"}
+          }
+        },
+        {
+          "id": "*body-label",
+          "style": {
+            "font-color": "0xFF0000FF"
+          },
+          "content": {
+            "value": { "default": "some other text on home page"}
+          }
+        },
+        {
+          "id": "*item-spacer",
+          "style": {
+            "weight": "0.5"
+          }            
+        },
+        {
+          "type": "button",
+          "style": {
+            "id": "*main-button"
+          },
+          "content": {
+            "value": { "default": "Navigate to credit page"},
+            "action": "navigate://url/page-credit"
+          }
+        },
+        {
+          "id": "*item-spacer-h"
+        },
+        {
+          "type": "button",
+          "style": {
+            "id": "*main-button"
+          },
+          "content": {
+            "value": { "default": "Navigate to template page"},
+            "action": "navigate://url/page-template"
+          }
+        }
+      ]
+    }
+  },
+  "contents": [
+    {
+      "id": "title-content",
+      "type": "label",
+      "style": {
+        "id": "*title-label"
+      },
+      "content": {
+        "value": { "id": "*text-title-home"}
+      }
+    }
+  ]
+}
+  

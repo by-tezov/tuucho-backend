@@ -1,0 +1,49 @@
+{
+  "main": {
+    "id": "template-page-default",
+    "type": "layout",
+    "variant": "linear",
+    "style": {
+      "orientation": "vertical"  
+    },
+    "content": {
+      "items": [
+        {
+          "type": "label",
+          "style": {
+            "id": "*title-label"
+          },
+          "content": {
+            "id": "*title-content"
+          }
+        },
+        {
+          "id": "*item-spacer"
+        },
+        {
+          "type": "label",
+          "style": {
+            "font-size": "18",
+            "font-color": "red"
+          },
+          "content": {
+            "id": "*body-content"
+          }
+        },
+        {
+          "id": "*item-spacer"
+        },
+        {
+          "type": "button",
+          "style": {
+            "id": "*main-button"
+          },
+          "content": {
+            "id": "*action-content"
+          }
+        }
+      ]
+    }
+  }
+}
+  

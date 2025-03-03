@@ -1,0 +1,19 @@
+{
+  "components": [
+    {
+      "id": "item-spacer",
+      "type": "spacer",
+      "style": {
+        "weight": "1.0"
+      }
+    },
+    {
+      "id": "item-spacer-h",
+      "type": "spacer",
+      "style": {
+        "id": "*item-spacer-h"
+      }
+    }
+  ]
+}
+  

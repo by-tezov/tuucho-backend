@@ -1,0 +1,28 @@
+{
+  "main": {
+    "id": "*template-page-default"
+  },
+  "contents": [
+    {
+      "id": "*title-content"
+    },
+    {
+      "id": "body-content",
+      "value": { "id": "*text-body-content"}
+    },
+    {
+      "id": "body-content-2",
+      "value": { "id": "*text-body-content-2"}
+    },
+    {
+      "id": "action-content",
+      "value": { "default": "Navigate to home page"},
+      "action": "navigate://url/page-home"
+    }
+  ],
+  "texts": {
+    "text-body-content": { "default": "some text on template page" },
+    "text-body-content-2": { "id": "*text-body-content-template" }
+  }
+}
+  
