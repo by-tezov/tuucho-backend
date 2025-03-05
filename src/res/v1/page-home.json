@@ -1,10 +1,9 @@
 {
-  "main": {
+  "root": {
     "id": "page-home",
-    "type": "layout",
-    "variant": "linear",
+    "subset": "layout-linear",
     "style": {
-      "orientation": "vertical"  
+      "orientation": "vertical"
     },
     "content": {
       "items": [
@@ -12,18 +11,10 @@
           "id": "*title-content"
         },
         {
-          "id": "*item-spacer"
+          "id": "*title-content-2"
         },
         {
-          "id": "body-label",
-          "type": "label",
-          "style": {
-            "font-size": "*body",
-            "font-color": "*red"
-          },
-          "content": {
-            "value": { "default": "some text on home page"}
-          }
+          "id": "*item-spacer"
         },
         {
           "id": "*body-label",
@@ -31,22 +22,37 @@
             "font-color": "0xFF0000FF"
           },
           "content": {
-            "value": { "default": "some other text on home page"}
+            "value": { "default": "some other text on home page" }
           }
         },
         {
-          "id": "*item-spacer",
+          "id": "body-label",
+          "subset": "label",
           "style": {
-            "weight": "0.5"
-          }            
+            "font-size": "*body",
+            "font-color": "*red"
+          },
+          "content": {
+            "value": { "default": "some text on home page" }
+          }
         },
         {
-          "type": "button",
+          "id": "*body-label",
+          "style": {
+            "font-size": null,
+            "font-color": "0xFF0000FF"
+          },
+          "content": {
+            "value": "some other text on home page with different style"
+          }
+        },
+        {
+          "subset": "button",
           "style": {
             "id": "*main-button"
           },
           "content": {
-            "value": { "default": "Navigate to credit page"},
+            "value": { "default": "Navigate to credit page" },
             "action": "navigate://url/page-credit"
           }
         },
@@ -54,29 +60,34 @@
           "id": "*item-spacer-h"
         },
         {
-          "type": "button",
+          "subset": "button",
           "style": {
             "id": "*main-button"
           },
           "content": {
-            "value": { "default": "Navigate to template page"},
+            "value": { "default": "Navigate to template page" },
             "action": "navigate://url/page-template"
           }
         }
       ]
     }
   },
-  "contents": [
+  "components": [
     {
       "id": "title-content",
-      "type": "label",
+      "subset": "label",
       "style": {
         "id": "*title-label"
       },
       "content": {
-        "value": { "id": "*text-title-home"}
+        "value": { "id": "*text-title-home" }
       }
+    }
+  ],
+  "texts": [
+    {
+      "id": "common",
+      "text-title-home-2": "some text on home page"
     }
   ]
 }
-  

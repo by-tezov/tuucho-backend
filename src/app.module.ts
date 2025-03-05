@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ResourceController } from './v1/resource/pages.controller';
+import { ResourceController } from './v1/resource/resource.controller';
 
 @Module({
   imports: [],

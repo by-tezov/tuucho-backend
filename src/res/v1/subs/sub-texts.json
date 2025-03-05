@@ -1,7 +1,10 @@
 {
-  "texts": {
-    "text-title-template": { "default": "Template Page" },
-    "text-title-home": { "default": "Home Page" },
-    "text-body-content-template": { "default": "some text on template page" }
-  }
+  "version": "1",
+  "texts": [
+    {
+      "id": "common",
+      "text-title-home": { "id": "*text-title-home-end" },
+      "text-title-home-end": { "default": "Home Page", "fr": "some other language" }
+    }
+  ]
 }

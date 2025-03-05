@@ -1,17 +1,27 @@
 {
+  "version": "1",
   "components": [
     {
       "id": "item-spacer",
-      "type": "spacer",
+      "subset": "spacer",
       "style": {
         "weight": "1.0"
       }
     },
     {
       "id": "item-spacer-h",
-      "type": "spacer",
       "style": {
         "id": "*item-spacer-h"
+      }
+    },
+    {
+      "id": "title-content-2",
+      "subset": "label",
+      "style": {
+        "id": "*title-label"
+      },
+      "content": {
+        "id": "*text-title-home-2"
       }
     }
   ]

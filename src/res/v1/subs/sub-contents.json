@@ -1,8 +1,13 @@
 {
+  "version": "1",
   "contents": [
     {
       "id": "title-content",
       "value": { "id": "*text-title-template" }
+    },
+    {
+      "id": "text-title-home-2",
+      "value": { "id": "*text-title-home" }
     }
   ]
 }

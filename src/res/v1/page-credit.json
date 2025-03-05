@@ -1,14 +1,14 @@
 {
-  "main": {
-    "type": "layout",
-    "variant": "linear",
+  "version": "1",
+  "root": {
+    "subset": "layout-linear",
     "style": {
       "orientation": "vertical"  
     },
     "content": {
       "items": [
         {
-          "type": "label",
+          "subset": "label",
           "style": {
             "id": "*title-label"
           },
@@ -20,7 +20,7 @@
           "id": "*item-spacer"
         },
         {
-          "type": "label",
+          "subset": "label",
           "style": {
             "font-size": "18",
             "font-color": "*red"
@@ -33,12 +33,12 @@
           "id": "*item-spacer"
         },
         {
-          "type": "button",
+          "subset": "button",
           "style": {
             "id": "*main-button"
           },
           "content": {
-            "value": { "default": "Navigate to home page"},
+            "value": "Navigate to home page",
             "action": "navigate://id/page-home"
           }
         }
@@ -48,7 +48,6 @@
   "components": [
     {
       "id": "item-spacer",
-      "type": "spacer",
       "style": {
         "height": "48"
       }
