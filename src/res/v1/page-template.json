@@ -4,9 +4,6 @@
   },
   "contents": [
     {
-      "id": "*title-content"
-    },
-    {
       "id": "body-content",
       "value": { "id": "*text-body-content" }
     },
@@ -16,15 +13,15 @@
     },
     {
       "id": "action-content",
-      "value": { "default": "Navigate to home page" },
+      "label": { "id": "*button-label-template" },
       "action": "navigate://url/page-home"
     }
   ],
-  "texts": [
-    {
-      "id": "common",
+  "texts": {
+    "common": {
       "text-body-content": "some text on template page",
-      "text-body-content-2": { "idFrom": "*text-body-content-template" }
+      "text-body-content-2": { "id": "*text-body-content-template" },
+      "text-title-template": "text title template"
     }
-  ]
+  }
 }

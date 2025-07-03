@@ -1,10 +1,15 @@
 {
   "version": "1",
-  "texts": [
-    {
-      "id": "common",
+  "texts": {
+    "common": {
+      "text-title-home-4": "hello world",
       "text-title-home": { "id": "*text-title-home-end" },
-      "text-title-home-end": { "default": "Home Page", "fr": "some other language" }
+      "text-title-home-end": {
+        "default": "Home Page",
+        "fr": "some other language"
+      },
+      "text-body-content-2": "hello world redirected multiple times",
+      "text-body-content-template": "hello world redirected multiple times"
     }
-  ]
+  }
 }

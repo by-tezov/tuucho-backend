@@ -21,17 +21,10 @@ export class ResourceController {
     @Query('name') name: string, 
     @Res() res: Response
   ) {
+      console.log(`request resource version=${version}, name=${name}`)
+
       const filePath = path.join(__dirname, `../../res/${version}`, `${name}.json`);
       this.readFile(filePath, res);
-  }
-
-  @Post()
-  postData(
-    @Body() body: { version: string, name: string },
-    @Res() res: Response
-  ) {
-    const filePath = path.join(__dirname, `../../res/${body.version}`, `${body.name}.json`);
-    this.readFile(filePath, res);
   }
 
 }

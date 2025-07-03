@@ -11,62 +11,114 @@
           "id": "*title-content"
         },
         {
-          "id": "*title-content-2"
+          "id": "*item-spacer-h"
         },
         {
           "id": "*item-spacer"
         },
         {
-          "id": "*body-label",
-          "style": {
-            "font-color": "0xFF0000FF"
-          },
-          "content": {
-            "value": { "default": "some other text on home page" }
-          }
-        },
-        {
           "id": "body-label",
           "subset": "label",
           "style": {
-            "font-size": "*body",
-            "font-color": "*red"
+            "font-size": { "id": "*font:body" },
+            "font-color": { "id": "*red" }
           },
           "content": {
             "value": { "default": "some text on home page" }
           }
         },
         {
-          "id": "*body-label",
-          "style": {
-            "font-size": null,
-            "font-color": "0xFF0000FF"
+          "id": "*item-spacer"
+        },
+        {
+          "id": "input-name-a",
+          "subset": "field",
+          "style": {},
+          "option": {
+            "validator": [
+              {
+                "type": "min-length",
+                "length": "4",
+                "id-message": "input-name-a-min-length"
+              },
+              {
+                "type": "max-length",
+                "length": "8",
+                "id-message": "input-name-a-max-length"
+              },
+              {
+                "type": "min-digit-length",
+                "length": "1",
+                "id-message": "input-name-a-min-digit-length"
+              }
+            ]
           },
           "content": {
-            "value": "some other text on home page with different style"
+            "title": { "default": "title input" },
+            "placeholder": { "default": "placeholder input" },
+            "message-error": [
+              { "id": {"value":"input-name-a-min-length", "source":"text-title-home-2"} },
+              { "id": "input-name-a-max-length", "default":"hello" },
+              { "id": "*text-title-home-2"},
+              { "id": "input-name-a-min-digit-length", "default":"hello 2"},
+              "just to try"
+            ]
           }
         },
         {
-          "subset": "button",
-          "style": {
-            "id": "*main-button"
-          },
-          "content": {
-            "value": { "default": "Navigate to credit page" },
-            "action": "navigate://url/page-credit"
-          }
+          "id": "*item-spacer"
         },
         {
-          "id": "*item-spacer-h"
-        },
-        {
-          "subset": "button",
+          "subset": "layout-linear",
           "style": {
-            "id": "*main-button"
+            "orientation": "horizontal"
           },
           "content": {
-            "value": { "default": "Navigate to template page" },
-            "action": "navigate://url/page-template"
+            "items": [
+              {
+                "id": "*item-spacer-v"
+              },
+              {
+                "subset": "button",
+                "style": { "id": "*main-button" },
+                "content": {
+                  "label": {
+                    "style": { "id": "*label-main-button-1" },
+                    "content": { "value": "Send and \nGo Credit page" }
+                  },
+                  "action": {
+                    "value": "send-form://url/form-from-page-home",
+                    "params": {
+                      "action-validated": "navigate://url/page-credit"
+                    }
+                  }
+                }
+              },
+              {
+                "id": "*item-spacer-v",
+                "style": {
+                  "weight": "1.0"
+                }
+              },
+              {
+                "subset": "button",
+                "style": {
+                  "id": "*main-button"
+                },
+                "content": {
+                  "label": {
+                    "style": { "id": "*label-main-button-2" },
+                    "content": {
+                      "value": { "default": "Template page" }
+                    }
+                  },
+                  "action": "navigate://url/page-template"
+                }
+              },
+              {
+                "id": "*item-spacer-v"
+              }
+            ]
           }
         }
       ]
@@ -84,10 +136,9 @@
       }
     }
   ],
-  "texts": [
-    {
-      "id": "common",
+  "texts": {
+    "common": {
       "text-title-home-2": "some text on home page"
     }
-  ]
+  }
 }

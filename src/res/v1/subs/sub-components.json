@@ -10,8 +10,16 @@
     },
     {
       "id": "item-spacer-h",
+      "subset": "spacer",
       "style": {
         "id": "*item-spacer-h"
+      }
+    },
+    {
+      "id": "item-spacer-v",
+      "subset": "spacer",
+      "style": {
+        "width": "16"
       }
     },
     {
@@ -23,7 +31,13 @@
       "content": {
         "id": "*text-title-home-2"
       }
+    },
+    {
+      "id": "button-label-template",
+      "style": { "id": "*label-main-button" },
+      "content": {
+        "value": { "default": "Navigate to home page" }
+      }
     }
   ]
 }
-  

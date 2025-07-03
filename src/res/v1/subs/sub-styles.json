@@ -4,46 +4,49 @@
     {
       "id": "title-label",
       "font-size": "*title",
-      "font-color": "0xFFD9D9D9"
+      "font-color": "#FF00D9D9"
     },
     {
       "id": "label-main-button",
       "font-size": "26",
-      "font-color": "*blue"
+      "font-color": { "id": "*blue" }
     },
     {
-      "id": "main-button",
-      "label": {
-        "id": "*label-main-button"
-      }
+      "id": "label-main-button-1",
+      "font-size": "24",
+      "font-color": { "id": "*green" }
+    },
+    {
+      "id": "label-main-button-2",
+      "font-size": "18",
+      "font-color": { "id": "*red" }
+    },
+    {
+      "id": "main-button"
     },
     {
       "id": "item-spacer-h",
       "height": "48"
     }
   ],
-  "colors": [
-    {
-      "id": "palette",
-      "black": "0xFFFFFFFF",
-      "gray": "0xFFD9D9D9",
-      "red": "0xFFFF0000",
-      "green": "0xFF00FF00",
-      "blue": "0xFF0000FF"
+  "colors": {
+    "common": {
+      "black": "#FFFFFFFF",
+      "gray": "#FFD9D9D9",
+      "red": "#FFFF0000",
+      "green": "#FF00FF00",
+      "blue": "#FF0000FF"
     }
-  ],
-  "dimensions": [
-    {
-      "id": "font",
+  },
+  "dimensions": {
+    "font": {
       "title": "26",
-      "body": "18",
+      "body": "32",
       "button": "22"
     },
-    {
-      "id": "padding",
+    "padding": {
       "spacer-default": "48",
       "spacer-fill-half": "0.5"
     }
-  ]
+  }
 }
-  

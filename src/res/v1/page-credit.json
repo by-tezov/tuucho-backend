@@ -3,7 +3,7 @@
   "root": {
     "subset": "layout-linear",
     "style": {
-      "orientation": "vertical"  
+      "orientation": "vertical"
     },
     "content": {
       "items": [
@@ -13,11 +13,11 @@
             "id": "*title-label"
           },
           "content": {
-            "value": { "default": "Credit Page"}
+            "value": { "default": "Credit Page" }
           }
         },
         {
-          "id": "*item-spacer"
+          "id": "*item-spacer-half"
         },
         {
           "subset": "label",
@@ -26,7 +26,7 @@
             "font-color": "*red"
           },
           "content": {
-            "value": { "default": "some text on credit page"}
+            "value": { "default": "some text on credit page" }
           }
         },
         {
@@ -38,8 +38,13 @@
             "id": "*main-button"
           },
           "content": {
-            "value": "Navigate to home page",
-            "action": "navigate://id/page-home"
+            "label": {
+              "style": { "id": "*label-main-button" },
+              "content": {
+                "value": "Navigate to home page"
+              }
+            },
+            "action": "navigate://url/page-home"
           }
         }
       ]
@@ -47,9 +52,10 @@
   },
   "components": [
     {
-      "id": "item-spacer",
+      "id": "item-spacer-half",
+      "subset": "spacer",
       "style": {
-        "height": "48"
+        "weight": "0.5"
       }
     }
   ],
@@ -66,4 +72,3 @@
     }
   ]
 }
-  

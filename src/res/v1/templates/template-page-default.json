@@ -4,7 +4,7 @@
     "id": "template-page-default",
     "subset": "layout-linear",
     "style": {
-      "orientation": "vertical"  
+      "orientation": "vertical"
     },
     "content": {
       "items": [
@@ -34,7 +34,7 @@
           "subset": "label",
           "style": {
             "font-size": "18",
-            "font-color": "*blue"
+            "font-color": { "id": "*blue" }
           },
           "content": {
             "id": "*body-content-2"
@@ -56,4 +56,3 @@
     }
   }
 }
-  
