@@ -3,7 +3,9 @@
   "root": {
     "subset": "layout-linear",
     "style": {
-      "orientation": "vertical"
+      "orientation": "vertical",
+      "background-color": { "id": "*background:funny-color" },
+      "fill-max-size": true
     },
     "content": {
       "items": [
@@ -13,7 +15,7 @@
             "id": "*title-label"
           },
           "content": {
-            "value": { "default": "Credit Page" }
+            "value": "Confirmation:"
           }
         },
         {
@@ -22,11 +24,11 @@
         {
           "subset": "label",
           "style": {
-            "font-size": "18",
-            "font-color": "*red"
+            "id": "*title-body",
+            "font-color": {"id":"*black"}
           },
           "content": {
-            "value": { "default": "some text on credit page" }
+            "value": { "default": "Merci, vous avez bien été ajouté à notre newsletter" }
           }
         },
         {
@@ -34,12 +36,9 @@
         },
         {
           "subset": "button",
-          "style": {
-            "id": "*main-button"
-          },
           "content": {
             "label": {
-              "style": { "id": "*label-main-button" },
+              "style": { "id": "*label-main-button-back" },
               "content": {
                 "value": "Navigate to home page"
               }
@@ -57,18 +56,6 @@
       "style": {
         "weight": "0.5"
       }
-    }
-  ],
-  "styles": [
-    {
-      "id": "title-label",
-      "font-size": "22",
-      "font-color": "*yellow"
-    },
-    {
-      "id": "main-button",
-      "font-size": "*button",
-      "font-color": "*green"
     }
   ]
 }

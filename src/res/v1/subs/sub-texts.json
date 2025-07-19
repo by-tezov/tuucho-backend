@@ -2,14 +2,7 @@
   "version": "1",
   "texts": {
     "common": {
-      "text-title-home-4": "hello world",
-      "text-title-home": { "id": "*text-title-home-end" },
-      "text-title-home-end": {
-        "default": "Home Page",
-        "fr": "some other language"
-      },
-      "text-body-content-2": "hello world redirected multiple times",
-      "text-body-content-template": "hello world redirected multiple times"
+      "text-body-content-help": "There is no help available at the moment"
     }
   }
 }

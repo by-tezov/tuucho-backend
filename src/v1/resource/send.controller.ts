@@ -17,7 +17,7 @@ export class SendController {
     console.log(`received data with version=${version}, name=${name}`)
     console.log(`data: ${JSON.stringify(body)}`)
 
-    return res.status(200).json({ 'isSuccess': true });
+    return res.status(200).json({ 'isAllSuccess': true });
     
     //return res
     //   .status(400)

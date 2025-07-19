@@ -9,34 +9,23 @@
       }
     },
     {
-      "id": "item-spacer-h",
+      "id": "item-spacer-48-v",
       "subset": "spacer",
       "style": {
-        "id": "*item-spacer-h"
+        "id": "*item-spacer-48-v"
       }
     },
     {
-      "id": "item-spacer-v",
+      "id": "item-spacer-24-v",
       "subset": "spacer",
       "style": {
-        "width": "16"
+        "id": "*item-spacer-24-v"
       }
     },
     {
-      "id": "title-content-2",
-      "subset": "label",
-      "style": {
-        "id": "*title-label"
-      },
+      "id": "button-label-help-to-home",
       "content": {
-        "id": "*text-title-home-2"
-      }
-    },
-    {
-      "id": "button-label-template",
-      "style": { "id": "*label-main-button" },
-      "content": {
-        "value": { "default": "Navigate to home page" }
+        "value": { "id": "*text-action-help" }
       }
     }
   ]
