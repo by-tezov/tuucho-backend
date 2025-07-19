@@ -2,17 +2,23 @@
   "version": "1",
   "contents": [
     {
-      "id": "title-content",
-      "value": { "id": "*text-title-template" }
-    },
-    {
-      "id": "text-title-home-2",
-      "value": { "id": "*text-title-home" }
-    },
-    {
-      "id": "action-content",
-      "label": { "id": "*button-label-template"},
-      "action": "navigate://id/page-home"
+      "id": "input-field-age-content",
+      "title": { "id": "*form:text-form-email-title" },
+      "placeholder": { "id": "*form:text-form-email-placeholder" },
+      "message-error": [
+        {
+          "id": {
+            "value": "validator-1"
+          },
+          "default": "your email is not valid"
+        },
+        {
+          "id": {
+            "value": "validator-2"
+          },
+          "default": "email can't be empty"
+        }
+      ]
     }
   ]
 }

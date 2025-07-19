@@ -31,11 +31,7 @@
       },
       {
         "version": "1",
-        "url":"page-credit"
-      },
-      {
-        "version": "1",
-        "url":"page-template"
+        "url":"page-help"
       }
     ]  
   }
