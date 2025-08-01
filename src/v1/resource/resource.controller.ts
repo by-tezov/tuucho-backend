@@ -18,12 +18,12 @@ export class ResourceController {
   @Get()
   getResource(
     @Query('version') version: string, 
-    @Query('name') name: string, 
+    @Query('url') url: string, 
     @Res() res: Response
   ) {
-      console.log(`request resource version=${version}, name=${name}`)
+      console.log(`request resource version=${version}, url=${url}`)
 
-      const filePath = path.join(__dirname, `../../res/${version}`, `${name}.json`);
+      const filePath = path.join(__dirname, `../../res/${version}`, `${url}.json`);
       this.readFile(filePath, res);
   }
 

@@ -1,10 +1,15 @@
 {
+  "version": "1",
   "root": {
-    "id": "page-home",
+    "id": {
+      "value": "page-home"
+    },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": { "id": "*background:gray-light" },
+      "background-color": {
+        "id": "*background:gray-light"
+      },
       "fill-max-size": true
     },
     "content": {
@@ -36,7 +41,7 @@
           }
         },
         {
-          "id": "input-field-custom",
+          "id": "comment",
           "subset": "field",
           "option": {
             "validator": "string-not-null"
@@ -46,6 +51,20 @@
             "placeholder": "short comment, please I'm lazy to read",
             "message-error": "Can't be empty, bro say something"
           }
+        },
+        {
+          "subset": "label",
+          "style": "*title-section",
+          "content": {
+            "value": "*fake-value-content"
+          }
+        },
+        {
+          "id": {
+            "value": "hoobies",
+            "source": "*input-field-on-demand"
+          },
+          "subset": "field"
         },
         {
           "id": "*item-spacer"
@@ -59,26 +78,14 @@
           },
           "content": {
             "items": [
+              "*button-form",
               {
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-form" },
-                    "content": { "value": "Send Form" }
-                  },
-                  "action": {
-                    "value": "form-send://url/form-from-page-home",
-                    "params": {
-                      "action-validated": "navigate://url/page-confirmation"
-                    }
-                  }
-                }
-              },
-              {
-                "subset": "button",
-                "content": {
-                  "label": {
-                    "style": { "id": "*label-main-button-help" },
+                    "style": {
+                      "id": "*label-main-button-help"
+                    },
                     "content": {
                       "value": "Get Help"
                     }
@@ -98,7 +105,9 @@
       "subset": "label",
       "style": "*title-label",
       "content": {
-        "value": { "id": "*text-title" }
+        "value": {
+          "id": "*text-title"
+        }
       }
     },
     {
@@ -108,7 +117,9 @@
         "id": "*title-body"
       },
       "content": {
-        "value": { "id": "*text-body" }
+        "value": {
+          "id": "*text-body"
+        }
       }
     },
     {
@@ -167,6 +178,29 @@
         ]
       },
       "content": "*input-field-age-content"
+    },
+    {
+      "id": "button-form",
+      "subset": "button",
+      "content": {
+        "label": "*button-form-label",
+        "action": {
+          "value": "form-send://url/form-from-page-home",
+          "params": {
+            "action-validated": "navigate://url/page-confirmation"
+          }
+        }
+      }
+    },
+    {
+      "subset": "label",
+      "id": "button-form-label",
+      "style": {
+        "id": "*label-main-button-form"
+      },
+      "content": {
+        "value": "Send Form"
+      }
     }
   ],
   "styles": [

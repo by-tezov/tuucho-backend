@@ -1,5 +1,9 @@
 {
+  "version": "1",
   "root": {
+    "setting": {
+      "disable-on-demande-definition-shadower": true
+    },
     "id": "*template-page-default"
   },
   "contents": [
