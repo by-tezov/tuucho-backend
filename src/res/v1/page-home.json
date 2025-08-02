@@ -42,7 +42,7 @@
         },
         {
           "id": "comment",
-          "subset": "field",
+          "subset": "form-field",
           "option": {
             "validator": "string-not-null"
           },
@@ -61,10 +61,10 @@
         },
         {
           "id": {
-            "value": "hoobies",
+            "value": "hobbies",
             "source": "*input-field-on-demand"
           },
-          "subset": "field"
+          "subset": "form-field"
         },
         {
           "id": "*item-spacer"
@@ -124,7 +124,7 @@
     },
     {
       "id": "input-field-age",
-      "subset": "field",
+      "subset": "form-field",
       "option": {
         "validator": [
           {
@@ -164,7 +164,7 @@
     },
     {
       "id": "input-field-email",
-      "subset": "field",
+      "subset": "form-field",
       "option": {
         "validator": [
           {
