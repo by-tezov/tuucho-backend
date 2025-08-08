@@ -5,7 +5,7 @@
       "id": "input-field-on-demand",
       "subset": "field",
       "option": {
-        "validator": "string-not-null"
+        "form-validator": "string-not-null"
       },
       "content": {
         "id": "input-field-age-content",

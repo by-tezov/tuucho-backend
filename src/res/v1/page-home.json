@@ -4,6 +4,9 @@
     "id": {
       "value": "page-home"
     },
+    "setting": {
+      "navigation-option": { "single-top": "true" }
+    },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
@@ -44,7 +47,7 @@
           "id": "comment",
           "subset": "form-field",
           "option": {
-            "validator": "string-not-null"
+            "form-validator": "string-not-null"
           },
           "content": {
             "title": "any comment?",
@@ -92,6 +95,21 @@
                   },
                   "action": "navigate://url/page-help"
                 }
+              },
+              {
+                "id": "*item-spacer"
+              },
+              {
+                "subset": "button",
+                "content": {
+                  "label": {
+                    "style": "*label-main-button-default",
+                    "content": {
+                      "value": "Page-A"
+                    }
+                  },
+                  "action": "navigate://url/page-a"
+                }
               }
             ]
           }
@@ -126,7 +144,7 @@
       "id": "input-field-age",
       "subset": "form-field",
       "option": {
-        "validator": [
+        "form-validator": [
           {
             "type": "string-min-value",
             "value": "18",
@@ -166,7 +184,7 @@
       "id": "input-field-email",
       "subset": "form-field",
       "option": {
-        "validator": [
+        "form-validator": [
           {
             "type": "string-email",
             "id-message-error": "*validator-1"
@@ -185,10 +203,8 @@
       "content": {
         "label": "*button-form-label",
         "action": {
-          "value": "form-send://url/form-from-page-home",
-          "params": {
-            "action-validated": "navigate://url/page-confirmation"
-          }
+          "value": "form://send-url/form-from-page-home",
+          "action-validated": "navigate://url/page-confirmation"
         }
       }
     },

@@ -25,7 +25,7 @@ export class ResourceController {
 
       const filePath = path.join(__dirname, `../../res/${version}`, `${url}.json`);
       if (url.endsWith('on-demand-definition')) {
-        const delay = Math.floor(Math.random() * (5000 - 1500 + 1)) + 1500;
+        const delay = Math.floor(Math.random() * (2500 - 500)) + 500;
         console.log(`Delaying response for ${delay}ms`);
         setTimeout(() => {
           this.readFile(filePath, res);
