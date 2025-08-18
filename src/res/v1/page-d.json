@@ -2,21 +2,35 @@
   "version": "1",
   "root": {
     "setting": {
-      "disable-on-demand-definition-shadower": true
+      "disable-on-demand-definition-shadower": true,
+      "navigation": {
+        "extra": {
+          "is-background-solid": false
+        },
+        "definition": {
+          "option": { "single": true },
+          "transition": {
+            "type": "slide-vertical",
+            "entrance": "from-top",
+            "effect": "cover"
+          }
+        }
+      }
     },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": "*gray-light",
+      "background-color": "*background:aqua-splash",
       "fill-max-size": true
     },
     "content": {
       "items": [
+        "*item-spacer",
         {
           "subset": "label",
           "style": "*title-label",
           "content": {
-            "value": "Page-D"
+            "value": "Page-D - with not solid background"
           }
         },
         "*item-spacer",
@@ -39,6 +53,19 @@
                     }
                   },
                   "action": "navigate://local-destination/back"
+                }
+              },
+              "*item-spacer",
+              {
+                "subset": "button",
+                "content": {
+                  "label": {
+                    "style": "*label-main-button-default",
+                    "content": {
+                      "value": "Page-E"
+                    }
+                  },
+                  "action": "navigate://url/page-e"
                 }
               }
             ]

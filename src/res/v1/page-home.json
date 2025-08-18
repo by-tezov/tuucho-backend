@@ -5,7 +5,15 @@
       "value": "page-home"
     },
     "setting": {
-      "navigation-option": { "single-top": "true" }
+      "navigation": {
+        "definition": {
+          "option": {
+            "single": true,
+            "reuse": "last"
+          },
+          "transition": "fade"
+        }
+      }
     },
     "subset": "layout-linear",
     "style": {

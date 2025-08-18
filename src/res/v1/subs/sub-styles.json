@@ -51,7 +51,13 @@
     "background": {
       "gray-light": "#FFD9D9D9",
       "funny-color": "#FF66D9FF",
-      "why-not-color": "#FF789AC0"
+      "why-not-color": "#FF789AC0",
+      "sunny-yellow": "#FFFFD966",
+      "crazy-orange": "#FFFF9966",
+      "minty-green": "#FF66FF99",
+      "royal-purple": "#FF9966FF",
+      "electric-pink": "#FFFF66CC",
+      "aqua-splash": "#8833CCFF"
     }
   },
   "dimensions": {

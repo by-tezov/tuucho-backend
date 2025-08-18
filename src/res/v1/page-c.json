@@ -2,12 +2,22 @@
   "version": "1",
   "root": {
     "setting": {
-      "disable-on-demand-definition-shadower": true
+      "disable-on-demand-definition-shadower": true,
+      "navigation": {
+        "definition": {
+          "option": { "single": true },
+            "transition": {
+              "type": "slide-horizontal",
+              "entrance": "from-end",
+              "effect": "cover"
+            }
+        }
+      }
     },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": "*gray-light",
+      "background-color": "*background:minty-green",
       "fill-max-size": true
     },
     "content": {

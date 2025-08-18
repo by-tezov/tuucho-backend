@@ -3,23 +3,36 @@
   "root": {
     "setting": {
       "disable-on-demand-definition-shadower": true,
-      "navigation-option": [
-        {
-          "selector": {
-            "type": "page-bread-crumb",
-            "value": "page-c"
-          },
-          "single-top": "false"
+      "navigation": {
+        "extra": {
+          "is-background-solid": true
         },
-        {
-          "single-top": "true"
-        }
-      ]
+        "definition": [
+          {
+            "selector": {
+              "type": "page-bread-crumb",
+              "value": "page-c"
+            },
+            "transition": {
+              "type": "slide-vertical",
+              "entrance": "from-bottom",
+              "effect": "cover"
+            }
+          },
+          {
+            "option": {
+              "single": true,
+              "reuse": true
+            },
+            "transition": "slide-horizontal"
+          }
+        ]
+      }
     },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": "*gray-light",
+      "background-color": "*background:sunny-yellow",
       "fill-max-size": true
     },
     "content": {
