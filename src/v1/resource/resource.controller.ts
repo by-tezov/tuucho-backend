@@ -18,13 +18,21 @@ export class ResourceController {
   @Get()
   getResource(
     @Query('version') version: string, 
-    @Query('name') name: string, 
+    @Query('url') url: string, 
     @Res() res: Response
   ) {
-      console.log(`request resource version=${version}, name=${name}`)
+      console.log(`request resource version=${version}, url=${url}`)
 
-      const filePath = path.join(__dirname, `../../res/${version}`, `${name}.json`);
-      this.readFile(filePath, res);
+      const filePath = path.join(__dirname, `../../res/${version}`, `${url}.json`);
+      if (url.endsWith('on-demand-definition')) {
+        const delay = Math.floor(Math.random() * (2500 - 500)) + 500;
+        console.log(`Delaying response for ${delay}ms`);
+        setTimeout(() => {
+          this.readFile(filePath, res);
+        }, delay);
+      } else {
+        this.readFile(filePath, res);
+      }
   }
 
 }

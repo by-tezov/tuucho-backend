@@ -1,10 +1,26 @@
 {
+  "version": "1",
   "root": {
-    "id": "page-home",
+    "id": {
+      "value": "page-home"
+    },
+    "setting": {
+      "navigation": {
+        "definition": {
+          "option": {
+            "single": true,
+            "reuse": "last"
+          },
+          "transition": "fade"
+        }
+      }
+    },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": { "id": "*background:gray-light" },
+      "background-color": {
+        "id": "*background:gray-light"
+      },
       "fill-max-size": true
     },
     "content": {
@@ -36,16 +52,30 @@
           }
         },
         {
-          "id": "input-field-custom",
-          "subset": "field",
+          "id": "comment",
+          "subset": "form-field",
           "option": {
-            "validator": "string-not-null"
+            "form-validator": "string-not-null"
           },
           "content": {
             "title": "any comment?",
             "placeholder": "short comment, please I'm lazy to read",
             "message-error": "Can't be empty, bro say something"
           }
+        },
+        {
+          "subset": "label",
+          "style": "*title-section",
+          "content": {
+            "value": "*fake-value-content"
+          }
+        },
+        {
+          "id": {
+            "value": "hobbies",
+            "source": "*input-field-on-demand"
+          },
+          "subset": "form-field"
         },
         {
           "id": "*item-spacer"
@@ -59,31 +89,34 @@
           },
           "content": {
             "items": [
+              "*button-form",
               {
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-form" },
-                    "content": { "value": "Send Form" }
-                  },
-                  "action": {
-                    "value": "form-send://url/form-from-page-home",
-                    "params": {
-                      "action-validated": "navigate://url/page-confirmation"
-                    }
-                  }
-                }
-              },
-              {
-                "subset": "button",
-                "content": {
-                  "label": {
-                    "style": { "id": "*label-main-button-help" },
+                    "style": {
+                      "id": "*label-main-button-help"
+                    },
                     "content": {
                       "value": "Get Help"
                     }
                   },
                   "action": "navigate://url/page-help"
+                }
+              },
+              {
+                "id": "*item-spacer"
+              },
+              {
+                "subset": "button",
+                "content": {
+                  "label": {
+                    "style": "*label-main-button-default",
+                    "content": {
+                      "value": "Page-A"
+                    }
+                  },
+                  "action": "navigate://url/page-a"
                 }
               }
             ]
@@ -98,7 +131,9 @@
       "subset": "label",
       "style": "*title-label",
       "content": {
-        "value": { "id": "*text-title" }
+        "value": {
+          "id": "*text-title"
+        }
       }
     },
     {
@@ -108,14 +143,16 @@
         "id": "*title-body"
       },
       "content": {
-        "value": { "id": "*text-body" }
+        "value": {
+          "id": "*text-body"
+        }
       }
     },
     {
       "id": "input-field-age",
-      "subset": "field",
+      "subset": "form-field",
       "option": {
-        "validator": [
+        "form-validator": [
           {
             "type": "string-min-value",
             "value": "18",
@@ -153,9 +190,9 @@
     },
     {
       "id": "input-field-email",
-      "subset": "field",
+      "subset": "form-field",
       "option": {
-        "validator": [
+        "form-validator": [
           {
             "type": "string-email",
             "id-message-error": "*validator-1"
@@ -167,6 +204,27 @@
         ]
       },
       "content": "*input-field-age-content"
+    },
+    {
+      "id": "button-form",
+      "subset": "button",
+      "content": {
+        "label": "*button-form-label",
+        "action": {
+          "value": "form://send-url/form-from-page-home",
+          "action-validated": "navigate://url/page-confirmation"
+        }
+      }
+    },
+    {
+      "subset": "label",
+      "id": "button-form-label",
+      "style": {
+        "id": "*label-main-button-form"
+      },
+      "content": {
+        "value": "Send Form"
+      }
     }
   ],
   "styles": [

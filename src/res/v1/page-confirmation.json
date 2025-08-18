@@ -1,6 +1,9 @@
 {
   "version": "1",
   "root": {
+    "setting": {
+      "disable-on-demand-definition-shadower": true
+    },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
@@ -43,7 +46,7 @@
                 "value": "Navigate to home page"
               }
             },
-            "action": "navigate://url/page-home"
+            "action": "navigate://local-destination/back"
           }
         }
       ]

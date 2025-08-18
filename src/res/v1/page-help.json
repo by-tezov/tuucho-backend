@@ -1,5 +1,9 @@
 {
+  "version": "1",
   "root": {
+    "setting": {
+      "disable-on-demand-definition-shadower": true
+    },
     "id": "*template-page-default"
   },
   "contents": [
@@ -14,7 +18,7 @@
     {
       "id": "action-content",
       "label": { "id": "*button-label-help-to-home" },
-      "action": "navigate://url/page-home"
+      "action": "navigate://local-destination/back"
     }
   ],
   "texts": {

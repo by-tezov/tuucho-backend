@@ -9,12 +9,12 @@ export class SendController {
   @Post()
   postData(
     @Query('version') version: string,
-    @Query('name') name: string,
+    @Query('url') url: string,
     @Body() body: any,
     @Res() res: Response
   ) {
 
-    console.log(`received data with version=${version}, name=${name}`)
+    console.log(`received data with version=${version}, url=${url}`)
     console.log(`data: ${JSON.stringify(body)}`)
 
     return res.status(200).json({ 'isAllSuccess': true });
