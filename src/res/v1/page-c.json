@@ -1,16 +1,20 @@
 {
-  "version": "1",
   "root": {
     "setting": {
-      "disable-on-demand-definition-shadower": true,
+      "shadower": {
+        "navigate-forward": {
+          "wait-done-to-render": true,
+          "enable": true
+        }
+      },
       "navigation": {
         "definition": {
           "option": { "single": true },
-            "transition": {
-              "type": "slide-horizontal",
-              "entrance": "from-end",
-              "effect": "cover"
-            }
+          "transition": {
+            "type": "slide-horizontal",
+            "entrance": "from-end",
+            "effect": "cover"
+          }
         }
       }
     },
@@ -27,6 +31,14 @@
           "style": "*title-label",
           "content": {
             "value": "Page-C"
+          }
+        },
+        "*item-spacer",
+        {
+          "subset": "label",
+          "style": "*title-body",
+          "content": {
+            "value": "*title-body"
           }
         },
         "*item-spacer",

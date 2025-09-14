@@ -1,5 +1,4 @@
 {
-  "version": "1",
   "components": [
     {
       "id": "input-field-on-demand",
@@ -9,15 +8,10 @@
       },
       "content": {
         "id": "input-field-age-content",
-        "title": "hbbies",
+        "title": "secret hobbies",
         "placeholder": "cook dead body parts",
         "message-error": "can't be null, i'm sure you have secret"
       }
     }
-  ],
-  "texts": {
-    "common": {
-      "fake-value-content": "on-demand-text"
-    }
-  }
+  ]
 }

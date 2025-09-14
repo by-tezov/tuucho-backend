@@ -1,10 +1,20 @@
 {
-  "version": "1",
   "root": {
     "id": {
       "value": "page-home"
     },
     "setting": {
+      "shadower": {
+        "navigate-forward": {
+          "wait-done-to-render": false,
+          "enable": true
+        },
+        "contextual": {
+          "url": {
+            "component": "${url-origin}-contextual-components"
+          }
+        }
+      },
       "navigation": {
         "definition": {
           "option": {
@@ -67,15 +77,20 @@
           "subset": "label",
           "style": "*title-section",
           "content": {
-            "value": "*fake-value-content"
+            "value": {
+              "id": {
+                "source": "*title-section",
+                "url-source": "${url-origin}-contextual-texts"
+              }
+            }
           }
         },
         {
+          "subset": "form-field",
           "id": {
             "value": "hobbies",
             "source": "*input-field-on-demand"
-          },
-          "subset": "form-field"
+          }
         },
         {
           "id": "*item-spacer"
@@ -236,7 +251,7 @@
   ],
   "texts": {
     "common": {
-      "text-title": "Home Page",
+      "text-title": "Home Page v3",
       "text-body": "bienvenue sur la page d'accueil"
     },
     "form": {
