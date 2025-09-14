@@ -24,8 +24,8 @@ export class ResourceController {
       console.log(`request resource version=${version}, url=${url}`)
 
       const filePath = path.join(__dirname, `../../res/${version}`, `${url}.json`);
-      if (url.endsWith('on-demand-definition')) {
-        const delay = Math.floor(Math.random() * (2500 - 500)) + 500;
+      if (url.endsWith('-contextual') || url.includes('-contextual-')) {
+        const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
         console.log(`Delaying response for ${delay}ms`);
         setTimeout(() => {
           this.readFile(filePath, res);

@@ -1,8 +1,12 @@
 {
-  "version": "1",
+  "setting": {
+    "ttl": {
+      "strategy": "transient",
+      "transient-value": "10s"
+    }
+  },
   "root": {
     "setting": {
-      "disable-on-demand-definition-shadower": true,
       "navigation": {
         "extra": {
           "is-background-solid": true
@@ -42,6 +46,14 @@
           "style": "*title-label",
           "content": {
             "value": "Page-A"
+          }
+        },
+        "*item-spacer",
+        {
+          "subset": "label",
+          "style": "*title-body",
+          "content": {
+            "value": "Page TLL of 10s"
           }
         },
         "*item-spacer",
