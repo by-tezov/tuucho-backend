@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { ResourceController } from './v1/resource/resource.controller';
-import { SendController } from './v1/resource/send.controller';
+import { ResourceController } from './v1/resource.controller';
+import { SendController } from './v1/send.controller';
 
 @Module({
   imports: [],
