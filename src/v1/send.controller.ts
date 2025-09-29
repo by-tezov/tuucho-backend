@@ -17,11 +17,11 @@ export class SendController {
     console.log(`received data with version=${version}, url=${url}`)
     console.log(`data: ${JSON.stringify(body)}`)
 
-    return res.status(200).json({ 'isAllSuccess': true });
+    return res.status(200).json({ 'type': 'all-succeed' });
     
     //return res
     //   .status(400)
-    //   .json({ 'isSuccess': false, 'error-reasons': "some error stuff to do" });
+    //   .json({ 'type': 'failure-result', 'content':[] });
 
   }
 

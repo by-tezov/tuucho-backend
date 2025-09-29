@@ -80,7 +80,9 @@
             "value": {
               "id": {
                 "source": "*title-section",
-                "url-source": "${url-origin}-contextual-texts"
+                "url-source": {
+                  "contextual": "${url-origin}-contextual-texts"
+                }
               }
             }
           }
