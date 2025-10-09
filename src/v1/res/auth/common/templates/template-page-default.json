@@ -4,7 +4,7 @@
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": { "id": "*background:why-not-color" },
+      "background-color": { "id": "*background@why-not-color" },
       "fill-max-size": true
     },
     "content": {

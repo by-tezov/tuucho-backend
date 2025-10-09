@@ -1,59 +1,34 @@
 {
-  "setting": {
-    "ttl": {
-      "strategy": "transient",
-      "transient-value": "10s"
-    }
-  },
   "root": {
     "setting": {
       "navigation": {
         "extra": {
-          "is-background-solid": true
+          "is-background-solid": false
         },
-        "definition": [
-          {
-            "selector": {
-              "type": "page-bread-crumb",
-              "value": "page-c"
-            },
-            "transition": {
-              "type": "slide-vertical",
-              "entrance": "from-bottom",
-              "effect": "cover"
-            }
-          },
-          {
-            "option": {
-              "single": true,
-              "reuse": true
-            },
-            "transition": "slide-horizontal"
+        "definition": {
+          "option": { "single": true },
+          "transition": {
+            "type": "slide-vertical",
+            "entrance": "from-top",
+            "effect": "cover"
           }
-        ]
+        }
       }
     },
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": "*background:sunny-yellow",
+      "background-color": "*background@aqua-splash",
       "fill-max-size": true
     },
     "content": {
       "items": [
+        "*item-spacer",
         {
           "subset": "label",
           "style": "*title-label",
           "content": {
-            "value": "Page-A"
-          }
-        },
-        "*item-spacer",
-        {
-          "subset": "label",
-          "style": "*title-body",
-          "content": {
-            "value": "Page TLL of 10s"
+            "value": "Page-D - with not solid background"
           }
         },
         "*item-spacer",
@@ -61,7 +36,7 @@
           "subset": "layout-linear",
           "style": {
             "orientation": "horizontal",
-            "background-color": "*background:funny-color",
+            "background-color": "*background@funny-color",
             "fill-max-width": true
           },
           "content": {
@@ -70,7 +45,7 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": "*label-main-button-default",
                     "content": {
                       "value": "BACK"
                     }
@@ -83,12 +58,12 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": "*label-main-button-default",
                     "content": {
-                      "value": "Page-B"
+                      "value": "Page-E"
                     }
                   },
-                  "action": "navigate://url/page-b"
+                  "action": "navigate://url/auth/page-e"
                 }
               }
             ]

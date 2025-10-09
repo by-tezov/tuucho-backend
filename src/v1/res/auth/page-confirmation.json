@@ -3,7 +3,7 @@
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": { "id": "*background:funny-color" },
+      "background-color": { "id": "*background@funny-color" },
       "fill-max-size": true
     },
     "content": {

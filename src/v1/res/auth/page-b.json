@@ -24,7 +24,7 @@
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": "*background:crazy-orange",
+      "background-color": "*background@crazy-orange",
       "fill-max-size": true
     },
     "content": {
@@ -49,7 +49,7 @@
           "subset": "layout-linear",
           "style": {
             "orientation": "horizontal",
-            "background-color": "*background:funny-color",
+            "background-color": "*background@funny-color",
             "fill-max-width": true
           },
           "content": {
@@ -75,7 +75,7 @@
                       "value": "Another Page-A"
                     }
                   },
-                  "action": "navigate://url/page-a"
+                  "action": "navigate://url/auth/page-a"
                 }
               },
               "*item-spacer",
@@ -88,7 +88,7 @@
                       "value": "Page-C"
                     }
                   },
-                  "action": "navigate://url/page-c"
+                  "action": "navigate://url/auth/page-c"
                 }
               }
             ]

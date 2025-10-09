@@ -2,32 +2,32 @@
   "styles": [
     {
       "id": "title-label",
-      "font-size": "*font:title",
+      "font-size": "*font@title",
       "font-color": "*blue"
     },
     {
       "id": "title-body",
-      "font-size": "*font:body",
+      "font-size": "*font@body",
       "font-color": "*black"
     },
     {
       "id": "label-main-button-form",
-      "font-size": { "id": "*font:button" },
+      "font-size": { "id": "*font@button" },
       "font-color": { "id": "*green" }
     },
     {
       "id": "label-main-button-help",
-      "font-size": "*font:button",
+      "font-size": "*font@button",
       "font-color": { "id": "*gray" }
     },
     {
       "id": "label-main-button-back",
-      "font-size": { "id": "*font:button" },
+      "font-size": { "id": "*font@button" },
       "font-color": "*black"
     },
     {
       "id": "label-main-button-default",
-      "font-size": { "id": "*font:button" },
+      "font-size": { "id": "*font@button" },
       "font-color": "*blue"
     },
     {

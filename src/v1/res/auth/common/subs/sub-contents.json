@@ -2,8 +2,8 @@
   "contents": [
     {
       "id": "input-field-age-content",
-      "title": { "id": "*form:text-form-email-title" },
-      "placeholder": { "id": "*form:text-form-email-placeholder" },
+      "title": { "id": "*form@text-form-email-title" },
+      "placeholder": { "id": "*form@text-form-email-placeholder" },
       "message-error": [
         {
           "id": {
