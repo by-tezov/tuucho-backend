@@ -17,14 +17,10 @@ export class SendFormLobbyController {
   }
 
   @Post()
-  getResource(
+  postData(
     @Res() res: Response,
-    @Headers() headers: IncomingHttpHeaders,
     @Body() body: any,
   ) {
-    console.log('received data with version=v1, url=form-from-page-login');
-    console.log(`data: ${JSON.stringify(body)}`);
-
     const token = this.randomAuthorization();
     this.loginTokenStore.setToken(token);
     return res.status(200).json({

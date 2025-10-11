@@ -11,12 +11,11 @@ import { LoginTokenStore } from './login-token-store.service';
 export class AuthGuard implements CanActivate {
   constructor(private readonly loginTokenStore: LoginTokenStore) {}
 
-  canActivate(context: ExecutionContext): boolean {
+  async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const headers = request.headers;
     const headerAuth = headers['authorization'] || headers['Authorization'];
     const expected = this.loginTokenStore.getToken();
-
     if (!headerAuth || !expected) {
       throw new UnauthorizedException('missing or invalid authorization');
     }

@@ -15,6 +15,7 @@
       "navigation": {
         "definition": {
           "option": {
+            "clear-stack": true,
             "single": true,
             "reuse": "last"
           },

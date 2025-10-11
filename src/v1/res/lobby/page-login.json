@@ -3,6 +3,10 @@
     "setting": {
       "navigation": {
         "definition": {
+          "option": {
+            "clear-stack": true,
+            "single": true
+          },
           "transition": "fade"
         }
       }
