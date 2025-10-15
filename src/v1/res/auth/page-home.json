@@ -1,8 +1,5 @@
 {
   "root": {
-    "id": {
-      "value": "page-home"
-    },
     "setting": {
       "shadower": {
         "navigate-forward": {
@@ -18,6 +15,7 @@
       "navigation": {
         "definition": {
           "option": {
+            "clear-stack": true,
             "single": true,
             "reuse": "last"
           },
@@ -28,9 +26,7 @@
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": {
-        "id": "*background:gray-light"
-      },
+      "background-color": "*background@gray-light",
       "fill-max-size": true
     },
     "content": {
@@ -43,7 +39,7 @@
           "subset": "label",
           "style": "*title-section",
           "content": {
-            "value": "*form:text-form-section-title"
+            "value": "*form@text-form-section-title"
           }
         },
         {
@@ -101,7 +97,7 @@
           "subset": "layout-linear",
           "style": {
             "orientation": "horizontal",
-            "background-color": "*background:funny-color",
+            "background-color": "*background@funny-color",
             "fill-max-width": true
           },
           "content": {
@@ -118,7 +114,7 @@
                       "value": "Get Help"
                     }
                   },
-                  "action": "navigate://url/page-help"
+                  "action": "navigate://url/auth/page-help"
                 }
               },
               {
@@ -133,7 +129,7 @@
                       "value": "Page-A"
                     }
                   },
-                  "action": "navigate://url/page-a"
+                  "action": "navigate://url/auth/page-a"
                 }
               }
             ]
@@ -187,8 +183,8 @@
         ]
       },
       "content": {
-        "title": "*form:text-form-age-title",
-        "placeholder": "*form:text-form-age-placeholder",
+        "title": "*form@text-form-age-title",
+        "placeholder": "*form@text-form-age-placeholder",
         "message-error": [
           {
             "id": "validator-1",
@@ -228,8 +224,8 @@
       "content": {
         "label": "*button-form-label",
         "action": {
-          "value": "form://send-url/form-from-page-home",
-          "action-validated": "navigate://url/page-confirmation"
+          "primary": "form://send-url/auth/form-from-page-home",
+          "validated": "navigate://url/auth/page-confirmation"
         }
       }
     },

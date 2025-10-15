@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { ResourceController } from '../src/v1/resource.controller';
+import { ResourceController } from '../src/v1/resource.auth.controller';
 
 describe('PagesController', () => {
   let controller: ResourceController;
