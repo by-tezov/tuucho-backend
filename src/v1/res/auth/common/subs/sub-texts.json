@@ -1,7 +1,9 @@
 {
   "texts": {
     "common": {
-      "text-body-content-help": "There is no help available at the moment"
+      "text-body-content-help": {
+        "default": "There is no help available at the moment"
+      }
     }
   }
 }

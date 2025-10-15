@@ -78,10 +78,7 @@
                       "value": "Connection"
                     }
                   },
-                  "action": {
-                    "primary": "form://send-url/form-from-page-login",
-                    "validated": "navigate://url/auth/page-home"
-                  }
+                  "action": "*button@confirm"
                 }
               },
               "*item-spacer"
@@ -115,18 +112,18 @@
       }
     }
   ],
-  "styles": [
-    {
-      "id": "title-section",
-      "font-size": "18",
-      "font-color": "*red"
-    },
-    {
-      "id": "label-main-button-default",
-      "font-size": { "id": "*font@button" },
-      "font-color": "*blue"
+  "styles": {
+    "common": {
+      "title-section": {
+        "font-size": "18",
+        "font-color": "*red"
+      },
+      "label-main-button-default": {
+        "font-size": { "id": "*font@button" },
+        "font-color": "*blue"
+      }
     }
-  ],
+  },
   "colors": {
     "common": {
       "red": "#FFFF0000",
@@ -143,6 +140,14 @@
     },
     "padding": {
       "spacer-24": "48"
+    }
+  },
+  "actions": {
+    "button": {
+      "confirm": {
+        "primary": "form://send-url/form-from-page-login",
+        "validated": "navigate://url/auth/page-home"
+      }
     }
   }
 }

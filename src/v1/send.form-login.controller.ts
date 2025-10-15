@@ -24,6 +24,7 @@ export class SendFormLobbyController {
     const token = this.randomAuthorization();
     this.loginTokenStore.setToken(token);
     return res.status(200).json({
+      'type' : 'form',
       'all-succeed': true,
       action: {
         before: [`store://key-value/save?login-authorization=${token}`],
