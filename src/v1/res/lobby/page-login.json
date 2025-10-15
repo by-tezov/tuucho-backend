@@ -38,9 +38,6 @@
             "title": "Login",
             "placeholder": "login",
             "message-error": "can not be null"
-          },
-          "state": {
-            "initial-value": { "default": "" }
           }
         },
         {
@@ -53,9 +50,6 @@
             "title": "Password",
             "placeholder": "password",
             "message-error": "can not be null"
-          },
-          "state": {
-            "initial-value": ""
           }
         },
         "*item-spacer",
