@@ -13,12 +13,14 @@ export class AuthGuard implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const headers = request.headers;
-
-    console.log(headers)
-    console.log(`expected ${expected}`)
-
     const headerAuth = headers['authorization'];
+
+
+    //TODO add agent ios/android to store 2 token
+
     const expected = this.loginTokenStore.getToken();
+
+
     if (!headerAuth || !expected) {
       throw new ForbiddenException('missing or invalid authorization');
     }
