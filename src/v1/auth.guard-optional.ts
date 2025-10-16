@@ -8,11 +8,7 @@ export class AuthGuardOptional implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const headers = request.headers;
-
-    console.log(headers)
-
-    const headerAuth = headers['authorization'];
-    if (!headerAuth) return true;
+    if (!headers['Authorization']) return true;
     return this.authGuard.canActivate(context);
   }
 }

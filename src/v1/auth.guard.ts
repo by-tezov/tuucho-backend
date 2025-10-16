@@ -14,18 +14,12 @@ export class AuthGuard implements CanActivate {
   async canActivate(context: ExecutionContext): Promise<boolean> {
     const request = context.switchToHttp().getRequest();
     const headers = request.headers;
-
-    console.log(headers)
-    console.log(this.loginTokenStore.getToken())
-
-    const headerAuth = headers['authorization'];
+    const headerAuth = headers['Authorization'];
     const expected = this.loginTokenStore.getToken();
-
     if (!headerAuth || !expected) {
       throw new UnauthorizedException('missing or invalid authorization');
     }
-
-    const match = headerAuth.toString().trim() === `bearer ${expected}`;
+    const match = headerAuth.toString().trim() === `Bearer ${expected}`;
     if (!match) {
       throw new ForbiddenException('invalid token');
     }
