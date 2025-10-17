@@ -17,7 +17,10 @@ export class AuthGuard implements CanActivate {
     if (!headerAuth) {
       throw new ForbiddenException('missing authorization header');
     }
-    const token = headerAuth.toString().trim();
+    const parts = headerAuth.toString().trim().split(/\s+/);
+    const token = parts.length === 2 && parts[0].toLowerCase() === 'bearer'
+      ? parts[1] : undefined;
+
     if (!this.loginTokenStore.isValid(token)) {
       throw new ForbiddenException('invalid token');
     }
