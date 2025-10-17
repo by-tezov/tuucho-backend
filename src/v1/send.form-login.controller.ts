@@ -20,9 +20,13 @@ export class SendFormLobbyController {
   postData(
     @Res() res: Response,
     @Body() body: any,
+    @Headers('platform') platform?: string,
   ) {
+    if (!platform) {
+      return res.status(500).json({ error: 'app indisponible' });
+    }
     const token = this.randomAuthorization();
-    this.loginTokenStore.setToken(token);
+    this.loginTokenStore.setToken(platform, token);
     return res.status(200).json({
       'type' : 'form',
       'all-succeed': true,
