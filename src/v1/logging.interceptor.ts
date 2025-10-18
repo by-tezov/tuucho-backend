@@ -13,6 +13,7 @@ export class LoggingInterceptor implements NestInterceptor {
     const { method, originalUrl, headers, body } = req;
 
     console.log(`${method} ${originalUrl}`);
+    console.log('Platform:', headers['platform']);
     console.log('Authorization:', headers['authorization']);
 
     if (Object.keys(body || {}).length) {
