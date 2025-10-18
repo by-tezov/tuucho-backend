@@ -4,8 +4,8 @@ import { Injectable } from '@nestjs/common';
 export class LoginTokenStore {
   private tokens = new Map<string, string>();
   
-  setToken(platform: string, token: string) {
-    this.tokens.set(platform, token);
+  setToken(login: string, token: string) {
+    this.tokens.set(login, token);
   }
 
   isValid(token: string): boolean {
