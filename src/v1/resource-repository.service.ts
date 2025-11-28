@@ -6,11 +6,6 @@ import * as path from 'path';
 export class ResourceRepositoryService {
   read(filePath: string): Promise<any> {
     return new Promise((resolve, reject) => {
-
-      /*if(filePath.includes("login")) {
-        return reject(new Error('resource not found'));
-      }*/
-
       fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
           return reject(new Error('resource not found'));

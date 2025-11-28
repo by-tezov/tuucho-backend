@@ -78,8 +78,7 @@
               "*item-spacer"
             ]
           }
-        },
-        "*item-spacer-half"
+        }
       ]
     }
   },
@@ -95,7 +94,7 @@
       "id": "item-spacer-24-v",
       "subset": "spacer",
       "style": {
-        "height": "*padding:spacer-24"
+        "height": "*padding@spacer-24"
       }
     },
     {
@@ -133,7 +132,7 @@
       "button": "16"
     },
     "padding": {
-      "spacer-24": "48"
+      "spacer-24": "24"
     }
   },
   "actions": {
@@ -142,6 +141,11 @@
         "primary": "form://send-url/form-from-page-login",
         "validated": "navigate://url/auth/page-home"
       }
+    }
+  },
+  "texts": {
+    "common": {
+      "login-init": "from here"
     }
   }
 }
