@@ -21,10 +21,6 @@ import { APP_INTERCEPTOR } from '@nestjs/core';
     SendAuthController,
   ],
   providers: [
-    {
-      provide: APP_INTERCEPTOR,
-      useClass: LoggingInterceptor,
-    },
     AuthGuard,
     AuthGuardOptional,
     LoginTokenStore,

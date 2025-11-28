@@ -21,11 +21,9 @@ export class SendFormLobbyController {
     @Res() res: Response,
     @Body() body: any,
   ) {
-//     if (!platform) {
-//       return res.status(500).json({ error: 'app indisponible' });
-//     }
     const token = this.randomAuthorization();
-    this.loginTokenStore.setToken('todo-login+password-from_form', token);
+    const login = body['common@input-field-login'];
+    this.loginTokenStore.setToken(login, token);
     return res.status(200).json({
       'type' : 'form',
       'all-succeed': true,
