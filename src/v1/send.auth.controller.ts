@@ -23,7 +23,7 @@ export class SendAuthController {
     @Body() body: any,
   ) {
     const url = `auth/${Array.isArray(segments) ? segments.join('/') : segments}`;
-    return res.status(200).json({ 'type' : 'form', 'all-succeed': true });
+    return res.status(200).json({ 'subset' : 'form', 'all-succeed': true });
 
     //return res
     //   .status(400)

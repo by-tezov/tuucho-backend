@@ -1,5 +1,13 @@
 {
   "material-resource": {
+    "global": {
+      "subs": [
+        {
+          "validity-key": "1",
+          "url": "lobby/common/subs/sub-texts"
+        }
+      ]
+    },
     "local": {
       "pages": [
         {

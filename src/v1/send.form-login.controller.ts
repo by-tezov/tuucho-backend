@@ -25,10 +25,11 @@ export class SendFormLobbyController {
     const login = body['common@input-field-login'];
     this.loginTokenStore.setToken(login, token);
     return res.status(200).json({
-      'type' : 'form',
+      'subset' : 'form',
       'all-succeed': true,
+      'failure-result': '*server-failure',
       action: {
-        before: [`store://key-value/save?login-authorization=${token}`],
+        before: `store://key-value/save?login-authorization=${token}`,
       },
     });
   }
