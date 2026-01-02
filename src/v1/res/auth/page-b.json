@@ -7,7 +7,7 @@
   "root": {
     "setting": {
       "navigation": {
-        "definition": [
+        "definitions": [
           {
             "option": {
               "single": true
@@ -70,7 +70,9 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": {
+                      "id": "*label-main-button-back"
+                    },
                     "content": {
                       "value": "Another Page-A"
                     }

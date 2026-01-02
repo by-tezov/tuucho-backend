@@ -3,13 +3,15 @@
     "setting": {
       "shadower": {
         "navigate-forward": {
-          "wait-done-to-render": false,
+          "wait-done-to-render": true,
           "enable": true
         }
       },
       "navigation": {
-        "definition": {
-          "option": { "single": true },
+        "definitions": {
+          "option": {
+            "single": true
+          },
           "transition": {
             "type": "slide-horizontal",
             "entrance": "from-end",
@@ -67,7 +69,9 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": {
+                      "id": "*label-main-button-back"
+                    },
                     "content": {
                       "value": "Another Page-A"
                     }
