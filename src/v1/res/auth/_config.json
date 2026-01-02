@@ -57,7 +57,7 @@
         {
           "validity-key": "1",
           "url-origin": "auth/page-home",
-          "url": "${url-origin}-contextual-texts"          
+          "url": "${url-origin}-contextual-texts"
         },
         {
           "validity-key": "1",

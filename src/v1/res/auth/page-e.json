@@ -2,8 +2,10 @@
   "root": {
     "setting": {
       "navigation": {
-        "definition": {
-          "option": { "single": true },
+        "definitions": {
+          "option": {
+            "single": true
+          },
           "transition": {
             "type": "slide-vertical",
             "entrance": "from-top",

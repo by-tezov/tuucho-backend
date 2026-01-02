@@ -2,9 +2,13 @@
   "contents": {
     "common": {
       "input-field-age-content": {
-        "title": { "id": "*form@text-form-email-title" },
-        "placeholder": { "id": "*form@text-form-email-placeholder" },
-        "message-error": [
+        "title": {
+          "id": "*form@text-form-email-title"
+        },
+        "placeholder": {
+          "id": "*form@text-form-email-placeholder"
+        },
+        "message-errors": [
           {
             "id": {
               "value": "validator-1"

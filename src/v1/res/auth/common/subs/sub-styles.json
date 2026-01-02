@@ -10,23 +10,37 @@
         "font-color": "*black"
       },
       "label-main-button-form": {
-        "font-size": { "id": "*font@button" },
-        "font-color": { "id": "*green" }
+        "font-size": {
+          "id": "*font@button"
+        },
+        "font-color": {
+          "id": "*green"
+        }
       },
       "label-main-button-help": {
         "font-size": "*font@button",
-        "font-color": { "id": "*gray" }
+        "font-color": {
+          "id": "*gray"
+        }
       },
       "label-main-button-back": {
-        "font-size": { "id": "*font@button" },
+        "font-size": {
+          "id": "*font@button"
+        },
         "font-color": "*black"
       },
       "label-main-button-default": {
-        "font-size": { "id": "*font@button" },
+        "font-size": {
+          "id": "*font@button"
+        },
         "font-color": "*blue"
       },
-      "item-spacer-48-v": { "height": "48" },
-      "item-spacer-24-v": { "height": "24" }
+      "item-spacer-48-v": {
+        "height": "48"
+      },
+      "item-spacer-24-v": {
+        "height": "24"
+      }
     }
   },
   "colors": {
@@ -46,7 +60,9 @@
       "minty-green": "#FF66FF99",
       "royal-purple": "#FF9966FF",
       "electric-pink": "#FFFF66CC",
-      "aqua-splash": { "default": "#8833CCFF" }
+      "aqua-splash": {
+        "default": "#8833CCFF"
+      }
     }
   },
   "dimensions": {
@@ -58,7 +74,9 @@
     "padding": {
       "spacer-24": "48",
       "spacer-48": "24",
-      "spacer-fill-half": { "default": "0.5" }
+      "spacer-fill-half": {
+        "default": "0.5"
+      }
     }
   }
 }

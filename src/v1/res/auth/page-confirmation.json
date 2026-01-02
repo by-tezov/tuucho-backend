@@ -3,7 +3,9 @@
     "subset": "layout-linear",
     "style": {
       "orientation": "vertical",
-      "background-color": { "id": "*background@funny-color" },
+      "background-color": {
+        "id": "*background@funny-color"
+      },
       "fill-max-size": true
     },
     "content": {
@@ -24,10 +26,14 @@
           "subset": "label",
           "style": {
             "id": "*title-body",
-            "font-color": {"id":"*black"}
+            "font-color": {
+              "id": "*black"
+            }
           },
           "content": {
-            "value": { "default": "Merci, vous avez bien été ajouté à notre newsletter" }
+            "value": {
+              "default": "Merci, vous avez bien été ajouté à notre newsletter"
+            }
           }
         },
         {
@@ -37,7 +43,9 @@
           "subset": "button",
           "content": {
             "label": {
-              "style": { "id": "*label-main-button-back" },
+              "style": {
+                "id": "*label-main-button-back"
+              },
               "content": {
                 "value": "Navigate to home page"
               }

@@ -8,10 +8,14 @@
         "value": "*text-body-title"
       },
       "body-content": {
-        "value": { "id": "*text-body-content" }
+        "value": {
+          "id": "*text-body-content"
+        }
       },
       "action-content": {
-        "label": { "id": "*button-label-help-to-home" },
+        "label": {
+          "id": "*button-label-help-to-home"
+        },
         "action": "navigate://local-destination/back"
       }
     }
@@ -19,7 +23,9 @@
   "texts": {
     "common": {
       "text-body-title": "Looking for help?",
-      "text-body-content": { "id": "*text-body-content-help" },
+      "text-body-content": {
+        "id": "*text-body-content-help"
+      },
       "text-action-help": "Navigate to home page"
     }
   }

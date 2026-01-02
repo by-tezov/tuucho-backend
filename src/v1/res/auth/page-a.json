@@ -11,7 +11,7 @@
         "extra": {
           "is-background-solid": true
         },
-        "definition": [
+        "definitions": [
           {
             "selector": {
               "type": "page-bread-crumb",
@@ -70,7 +70,9 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": {
+                      "id": "*label-main-button-back"
+                    },
                     "content": {
                       "value": "BACK"
                     }
@@ -83,7 +85,9 @@
                 "subset": "button",
                 "content": {
                   "label": {
-                    "style": { "id": "*label-main-button-back" },
+                    "style": {
+                      "id": "*label-main-button-back"
+                    },
                     "content": {
                       "value": "Page-B"
                     }
