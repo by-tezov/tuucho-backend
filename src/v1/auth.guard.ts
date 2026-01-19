@@ -18,8 +18,10 @@ export class AuthGuard implements CanActivate {
       throw new ForbiddenException('missing authorization header');
     }
     const parts = headerAuth.toString().trim().split(/\s+/);
-    const token = parts.length === 2 && parts[0].toLowerCase() === 'bearer'
-      ? parts[1] : undefined;
+    const token =
+      parts.length === 2 && parts[0].toLowerCase() === 'bearer'
+        ? parts[1]
+        : undefined;
 
     if (!this.loginTokenStore.isValid(token)) {
       throw new ForbiddenException('invalid token');

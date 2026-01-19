@@ -8,6 +8,10 @@
         {
           "include": "*/res/**/*",
           "outDir": "dist/"
+        },
+        {
+          "include": "*/img/**/*",
+          "outDir": "dist/"
         }
     ]
   }

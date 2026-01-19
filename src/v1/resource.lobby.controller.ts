@@ -3,11 +3,9 @@ import {
   Get,
   Param,
   Res,
-  Headers,
   InternalServerErrorException,
 } from '@nestjs/common';
 import { Response } from 'express';
-import type { IncomingHttpHeaders } from 'http';
 import { ResourceRepositoryService } from './resource-repository.service';
 
 @Controller('v1/resource/lobby')

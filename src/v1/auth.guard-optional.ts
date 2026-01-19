@@ -6,8 +6,8 @@ import { PATH_METADATA } from '@nestjs/common/constants';
 @Injectable()
 export class AuthGuardOptional implements CanActivate {
   constructor(
-   private readonly reflector: Reflector,
-   readonly authGuard: AuthGuard
+    private readonly reflector: Reflector,
+    readonly authGuard: AuthGuard,
   ) {}
 
   async canActivate(context: ExecutionContext): Promise<boolean> {
@@ -20,7 +20,9 @@ export class AuthGuardOptional implements CanActivate {
       context.getClass(),
     );
     const base = `/${controllerPath}`;
-    const relative = request.url.startsWith(base) ? request.url.substring(base.length) : request.url;
+    const relative = request.url.startsWith(base)
+      ? request.url.substring(base.length)
+      : request.url;
     if (url.startsWith('/auth') || headerAuth != null) {
       return this.authGuard.canActivate(context);
     }

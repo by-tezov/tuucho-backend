@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class LoginTokenStore {
   private tokens = new Map<string, string>();
-  
+
   setToken(login: string, token: string) {
     this.tokens.set(login, token);
   }
@@ -14,5 +14,4 @@ export class LoginTokenStore {
     }
     return false;
   }
-
 }
