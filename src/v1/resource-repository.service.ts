@@ -22,6 +22,6 @@ export class ResourceRepositoryService {
   }
 
   resolveResourcePath(url: string): string {
-    return path.join(__dirname, `res/`, `${url}.json`);
+    return path.join(__dirname, `${url}.json`);
   }
 }

@@ -29,37 +29,37 @@ export class ImageRepositoryService {
     });
   }
 
-resolveImagePath(url: string): string {
-  const basePath = path.join(__dirname, `img/`, url);
-  const urlExt = path.extname(url).toLowerCase().replace('.', '');
-  
-  if (urlExt) {
-    if (fs.existsSync(basePath)) {
-      return basePath;
-    }
-    for (const ext of Object.keys(this.contentTypes)) {
-      const fullPath = `${basePath}.${ext}`;
-      if (fs.existsSync(fullPath)) {
-        return fullPath;
+  resolveImagePath(url: string): string {
+    const basePath = path.join(__dirname, url);
+    const urlExt = path.extname(url).toLowerCase().replace('.', '');
+    
+    if (urlExt) {
+      if (fs.existsSync(basePath)) {
+        return basePath;
+      }
+      for (const ext of Object.keys(this.contentTypes)) {
+        const fullPath = `${basePath}.${ext}`;
+        if (fs.existsSync(fullPath)) {
+          return fullPath;
+        }
+      }
+      const basePathWithoutExt = basePath.substring(0, basePath.lastIndexOf('.'));
+      for (const ext of Object.keys(this.contentTypes)) {
+        const fullPath = `${basePathWithoutExt}.${ext}`;
+        if (fs.existsSync(fullPath)) {
+          return fullPath;
+        }
+      }
+    } else {
+      for (const ext of Object.keys(this.contentTypes)) {
+        const fullPath = `${basePath}.${ext}`;
+        if (fs.existsSync(fullPath)) {
+          return fullPath;
+        }
       }
     }
-    const basePathWithoutExt = basePath.substring(0, basePath.lastIndexOf('.'));
-    for (const ext of Object.keys(this.contentTypes)) {
-      const fullPath = `${basePathWithoutExt}.${ext}`;
-      if (fs.existsSync(fullPath)) {
-        return fullPath;
-      }
-    }
-  } else {
-    for (const ext of Object.keys(this.contentTypes)) {
-      const fullPath = `${basePath}.${ext}`;
-      if (fs.existsSync(fullPath)) {
-        return fullPath;
-      }
-    }
+    throw new Error('resource not found');
   }
-  throw new Error('resource not found');
-}
 
   resolveContentType(filePath: string): string {
     const ext = filePath.split('.').pop()?.toLowerCase();

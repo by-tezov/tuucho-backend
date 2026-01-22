@@ -1,6 +1,6 @@
 {
   "setting": {
-    "time-to-live": {
+    "ttl": {
       "strategy": "transient",
       "transient-value": "10s"
     }

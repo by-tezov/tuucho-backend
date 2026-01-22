@@ -14,12 +14,24 @@ export class ResourceLobbyController {
     private readonly resourceRepositoryService: ResourceRepositoryService,
   ) {}
 
-  @Get('contextual/{*segments}')
+  @Get('{*segmentsBefore}-contextual-{*segmentsAfter}')
+  @Get('{*segments}-contextual')
   getResourceContextual(
-    @Param('segments') segments: string | string[],
+    @Param('segmentsBefore') segmentsBefore: string | string[],
+    @Param('segmentsAfter') segmentsAfter: string | string[],
     @Res() res: Response,
   ) {
-    const url = `lobby/contextual/${Array.isArray(segments) ? segments.join('/') : segments}`;
+       const before = Array.isArray(segmentsBefore)
+      ? segmentsBefore.join('/')
+      : (segmentsBefore ?? '');
+    const after = Array.isArray(segmentsAfter)
+      ? segmentsAfter.join('/')
+      : (segmentsAfter ?? '');
+
+    const url = after
+      ? `resource/auth/${before}-contextual-${after}`
+      : `resource/auth/${before}-contextual`;
+      
     const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
 
     console.log(`Delaying response for ${delay}ms`);
@@ -41,7 +53,7 @@ export class ResourceLobbyController {
     @Param('segments') segments: string | string[],
     @Res() res: Response,
   ) {
-    const url = `lobby/${Array.isArray(segments) ? segments.join('/') : segments}`;
+    const url = `resource/lobby/${Array.isArray(segments) ? segments.join('/') : segments}`;
     try {
       const filePath = this.resourceRepositoryService.resolveResourcePath(url);
       const data = await this.resourceRepositoryService.read(filePath);

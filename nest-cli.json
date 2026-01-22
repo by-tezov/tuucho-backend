@@ -6,11 +6,11 @@
     "deleteOutDir": true,
     "assets": [
         {
-          "include": "*/res/**/*",
+          "include": "*/resource/**/*",
           "outDir": "dist/"
         },
         {
-          "include": "*/img/**/*",
+          "include": "*/image/**/*",
           "outDir": "dist/"
         }
     ]

@@ -34,8 +34,8 @@ export class ResourceAuthController {
       : (segmentsAfter ?? '');
 
     const url = after
-      ? `auth/${before}-contextual-${after}`
-      : `auth/${before}-contextual`;
+      ? `resource/auth/${before}-contextual-${after}`
+      : `resource/auth/${before}-contextual`;
 
     const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
 
@@ -58,7 +58,7 @@ export class ResourceAuthController {
     @Param('segments') segments: string | string[],
     @Res() res: Response,
   ) {
-    const url = `auth/${Array.isArray(segments) ? segments.join('/') : segments}`;
+    const url = `resource/auth/${Array.isArray(segments) ? segments.join('/') : segments}`;
 
     try {
       const filePath = this.resourceRepositoryService.resolveResourcePath(url);
