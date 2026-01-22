@@ -15,7 +15,7 @@ export class ImageAuthController {
     @Param('segments') segments: string | string[],
     @Res() res: Response,
   ) {
-      const url = `auth/${Array.isArray(segments) ? segments.join('/') : segments}`;
+      const url = `image/auth/${Array.isArray(segments) ? segments.join('/') : segments}`;
       const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
       console.log(`Delaying response for ${delay}ms`);
       setTimeout(async () => {

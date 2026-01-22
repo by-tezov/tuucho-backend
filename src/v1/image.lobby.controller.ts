@@ -13,7 +13,7 @@ export class ImageLobbyController {
     @Param('segments') segments: string | string[],
     @Res() res: Response,
   ) {
-      const url = `lobby/${Array.isArray(segments) ? segments.join('/') : segments}`;
+      const url = `image/lobby/${Array.isArray(segments) ? segments.join('/') : segments}`;
       const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
       console.log(`Delaying response for ${delay}ms`);
       setTimeout(async () => {
