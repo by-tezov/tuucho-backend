@@ -1,0 +1,9 @@
+{
+  "texts": {
+    "common": {
+      "credentials-request": {
+        "default": "Please enter your credentials"
+      }
+    }
+  }
+}
