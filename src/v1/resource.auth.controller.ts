@@ -48,7 +48,7 @@ export class ResourceAuthController {
         const data = await this.resourceRepositoryService.read(filePath);
         return res.json(data);
       } catch (e: any) {
-        throw new InternalServerErrorException('app indisponible');
+        res.status(500).json({ message: 'app indisponible' });
       }
     }, delay);
   }
@@ -65,7 +65,7 @@ export class ResourceAuthController {
       const data = await this.resourceRepositoryService.read(filePath);
       return res.json(data);
     } catch (e: any) {
-      throw new InternalServerErrorException('app indisponible');
+      res.status(500).json({ message: 'app indisponible' });
     }
   }
 }

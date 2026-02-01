@@ -21,7 +21,7 @@ export class ResourceLobbyController {
     @Param('segmentsAfter') segmentsAfter: string | string[],
     @Res() res: Response,
   ) {
-       const before = Array.isArray(segmentsBefore)
+    const before = Array.isArray(segmentsBefore)
       ? segmentsBefore.join('/')
       : (segmentsBefore ?? '');
     const after = Array.isArray(segmentsAfter)
@@ -31,7 +31,7 @@ export class ResourceLobbyController {
     const url = after
       ? `resource/auth/${before}-contextual-${after}`
       : `resource/auth/${before}-contextual`;
-      
+
     const delay = Math.floor(Math.random() * (5000 - 500)) + 500;
 
     console.log(`Delaying response for ${delay}ms`);
@@ -43,7 +43,7 @@ export class ResourceLobbyController {
         const data = await this.resourceRepositoryService.read(filePath);
         return res.json(data);
       } catch (e: any) {
-        throw new InternalServerErrorException('app indisponible');
+        res.status(500).json({ message: 'app indisponible' });
       }
     }, delay);
   }
@@ -59,7 +59,7 @@ export class ResourceLobbyController {
       const data = await this.resourceRepositoryService.read(filePath);
       return res.json(data);
     } catch (e: any) {
-      throw new InternalServerErrorException('app indisponible');
+      res.status(500).json({ message: 'app indisponible' });
     }
   }
 }
