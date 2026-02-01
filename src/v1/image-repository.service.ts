@@ -5,12 +5,12 @@ import * as path from 'path';
 @Injectable()
 export class ImageRepositoryService {
   private readonly contentTypes: Record<string, string> = {
-    'svg': 'image/svg+xml',
-    'png': 'image/png',
-    'jpg': 'image/jpeg',
-    'jpeg': 'image/jpeg',
-    'gif': 'image/gif',
-    'webp': 'image/webp',
+    svg: 'image/svg+xml',
+    png: 'image/png',
+    jpg: 'image/jpeg',
+    jpeg: 'image/jpeg',
+    gif: 'image/gif',
+    webp: 'image/webp',
   };
 
   read(filePath: string): Promise<any> {
@@ -32,7 +32,7 @@ export class ImageRepositoryService {
   resolveImagePath(url: string): string {
     const basePath = path.join(__dirname, url);
     const urlExt = path.extname(url).toLowerCase().replace('.', '');
-    
+
     if (urlExt) {
       if (fs.existsSync(basePath)) {
         return basePath;
@@ -43,7 +43,10 @@ export class ImageRepositoryService {
           return fullPath;
         }
       }
-      const basePathWithoutExt = basePath.substring(0, basePath.lastIndexOf('.'));
+      const basePathWithoutExt = basePath.substring(
+        0,
+        basePath.lastIndexOf('.'),
+      );
       for (const ext of Object.keys(this.contentTypes)) {
         const fullPath = `${basePathWithoutExt}.${ext}`;
         if (fs.existsSync(fullPath)) {
@@ -68,5 +71,4 @@ export class ImageRepositoryService {
     }
     return this.contentTypes[ext];
   }
-
 }

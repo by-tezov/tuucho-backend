@@ -12,7 +12,6 @@ export class HealthController {
     @Res() res: Response,
   ) {
     const url = `${Array.isArray(segments) ? segments.join('/') : segments}`;
-
     return res.status(200).json({ health: '100%' });
   }
 }
